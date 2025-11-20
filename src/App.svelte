@@ -1,24 +1,26 @@
 <script lang="ts">
+import type { Locale } from 'intlayer';
 import { useIntlayer } from 'svelte-intlayer';
 import viteLogo from '/vite.svg';
 import svelteLogo from './assets/svelte.svg';
 import Counter from './lib/Counter.svelte';
 import LocaleSwitcher from './lib/LocaleSwitcher.svelte';
 
-const content = useIntlayer('app');
+export let locale: Locale;
+
+$: content = useIntlayer('app', locale);
 </script>
 
 <main>
   <div class="locale-switcher-container">
-    <LocaleSwitcher />
+    <LocaleSwitcher currentLocale={locale} />
   </div>
-  
-  <div>
+    <div>
     <a href="https://vite.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt={$content.viteLogoAlt} />
+      <img src={viteLogo} class="logo" alt={$content.viteLogoAlt.value} />
     </a>
     <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt={$content.svelteLogoAlt} />
+      <img src={svelteLogo} class="logo svelte" alt={$content.svelteLogoAlt.value} />
     </a>
   </div>
   <h1>Vite + Svelte</h1>

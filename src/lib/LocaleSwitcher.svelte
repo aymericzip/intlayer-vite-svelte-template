@@ -1,21 +1,28 @@
 <script lang="ts">
-import { getLocaleName } from "intlayer";
+import { getLocaleName, getLocalizedUrl } from "intlayer";
 import { useLocale } from "svelte-intlayer";
+import { push } from "svelte-spa-router";
 
-// Get locale information and setLocale function
-const { locale, availableLocales, setLocale } = useLocale();
+export let currentLocale: string | undefined = undefined;
+
+// Get locale information
+const { locale, availableLocales } = useLocale();
 
 // Handle locale change
 const changeLocale = (event: Event) => {
 	const target = event.target as HTMLSelectElement;
 	const newLocale = target.value;
-	console.log("changeLocale", newLocale);
-	setLocale(newLocale);
+
+  const currentUrl = window.location.pathname;
+
+  const url = getLocalizedUrl( currentUrl, newLocale);
+
+  push(url);
 };
 </script>
   
   <div class="locale-switcher">
-    <select value={$locale} on:change={changeLocale}>
+    <select value={currentLocale ?? $locale} onchange={changeLocale}>
       {#each availableLocales ?? [] as loc}
         <option value={loc}>
           {getLocaleName(loc)}
