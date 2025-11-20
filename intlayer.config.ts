@@ -1,4 +1,4 @@
-import { type IntlayerConfig, Locales } from 'intlayer';
+import { type IntlayerConfig, Locales } from "intlayer";
 
 const config: IntlayerConfig = {
   internationalization: {
@@ -7,20 +7,20 @@ const config: IntlayerConfig = {
   },
   editor: {
     enabled: true,
-    applicationURL: 'http://localhost:5173',
-    editorURL: 'http://localhost:8000',
+    applicationURL: "http://localhost:5173",
+    editorURL: "http://localhost:8000",
     clientId: process.env.INTLAYER_CLIENT_ID,
     clientSecret: process.env.INTLAYER_CLIENT_SECRET,
   },
   log: {
-    mode: 'verbose',
+    mode: "verbose",
   },
   ai: {
-    model: 'gpt-4o-mini',
+    model: "gpt-5-mini",
     apiKey: process.env.OPENAI_API_KEY,
   },
   routing: {
-    storage: ['cookie', 'localStorage', 'header'],
+    storage: ["cookie", "localStorage", "header"],
   },
 };
 
