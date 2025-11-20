@@ -8,6 +8,8 @@ import LocaleSwitcher from './lib/LocaleSwitcher.svelte';
 
 export let locale: Locale;
 
+
+
 $: content = useIntlayer('app', locale);
 </script>
 
@@ -23,7 +25,7 @@ $: content = useIntlayer('app', locale);
       <img src={svelteLogo} class="logo svelte" alt={$content.svelteLogoAlt.value} />
     </a>
   </div>
-  <h1>Vite + Svelte</h1>
+  <h1><svelte:component this={$content.title} /></h1>
 
   <div class="card">
     <Counter />
