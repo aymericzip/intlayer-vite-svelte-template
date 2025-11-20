@@ -24,6 +24,9 @@ dist-ssr
 *.sw?
 
 
+# env
+.env
+
 # intlayer
 .intlayer
 
