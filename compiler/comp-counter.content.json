@@ -1,0 +1,14 @@
+{
+  "$schema": "https://intlayer.org/schema.json",
+  "key": "comp-counter",
+  "content": {
+    "helloWorld": {
+      "nodeType": "translation",
+      "translation": {
+        "en": "Hello World",
+        "fr": "Bonjour le monde",
+        "it": "Ciao mondo"
+      }
+    }
+  }
+}
