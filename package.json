@@ -19,11 +19,11 @@
     "svelte-check": "4.3.4",
     "typescript": "5.9.3",
     "vite": "7.2.4",
-    "vite-intlayer": "8.0.0-canary.5"
+    "vite-intlayer": "latest"
   },
   "dependencies": {
     "@intlayer/svelte-compiler": "8.0.0-canary.5",
-    "intlayer": "8.0.0-canary.5",
+    "intlayer": "latest",
     "svelte-intlayer": "latest",
     "svelte-spa-router": "^4.0.1"
   }
