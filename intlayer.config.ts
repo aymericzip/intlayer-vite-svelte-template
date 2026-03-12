@@ -5,6 +5,9 @@ const config: IntlayerConfig = {
     locales: [Locales.ENGLISH, Locales.FRENCH, Locales.SPANISH],
     defaultLocale: Locales.ENGLISH,
   },
+  dictionary: {
+    importMode: "dynamic",
+  },
   editor: {
     enabled: true,
     applicationURL: "http://localhost:5173",

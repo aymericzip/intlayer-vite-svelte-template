@@ -5,9 +5,7 @@
     "helloWorld": {
       "nodeType": "translation",
       "translation": {
-        "en": "Hello World",
-        "fr": "Bonjour le monde",
-        "it": "Ciao mondo"
+        "en": "Hello World"
       }
     }
   }
