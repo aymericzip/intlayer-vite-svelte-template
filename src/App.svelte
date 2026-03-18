@@ -1,6 +1,8 @@
 <script lang="ts">
 import type { Locale } from 'intlayer';
-import { useIntlayer } from 'svelte-intlayer';
+import { useIntlayer,
+  setupIntlayer,
+ } from 'svelte-intlayer';
 import viteLogo from '/vite.svg';
 import svelteLogo from './assets/svelte.svg';
 import Counter from './lib/Counter.svelte';
@@ -8,6 +10,7 @@ import LocaleSwitcher from './lib/LocaleSwitcher.svelte';
 
 export let locale: Locale;
 
+setupIntlayer()
 
 
 $: content = useIntlayer('app', locale);
