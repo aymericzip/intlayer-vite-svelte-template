@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "tsc && vite build",
     "start:editor": "npx intlayer-editor start --with 'vite dev'",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.app.json && tsc -p tsconfig.node.json"
@@ -15,10 +15,10 @@
     "@tsconfig/svelte": "5.0.8",
     "@types/node": "25.5.0",
     "intlayer-editor": "latest",
-    "svelte": "5.54.0",
+    "svelte": "5.55.0",
     "svelte-check": "4.4.5",
-    "typescript": "5.9.3",
-    "vite": "8.0.0",
+    "typescript": "6.0.2",
+    "vite": "^8.0.2",
     "vite-intlayer": "latest"
   },
   "dependencies": {
