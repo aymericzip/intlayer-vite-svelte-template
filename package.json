@@ -14,17 +14,17 @@
     "@sveltejs/vite-plugin-svelte": "7.0.0",
     "@tsconfig/svelte": "5.0.8",
     "@types/node": "25.5.0",
-    "intlayer-editor": "latest",
+    "intlayer-editor": "9.0.0-canary.12",
     "svelte": "5.55.0",
     "svelte-check": "4.4.5",
     "typescript": "6.0.2",
     "vite": "^8.0.2",
-    "vite-intlayer": "latest"
+    "vite-intlayer": "9.0.0-canary.12"
   },
   "dependencies": {
-    "@intlayer/svelte-compiler": "latest",
-    "intlayer": "latest",
-    "svelte-intlayer": "latest",
+    "@intlayer/svelte-compiler": "9.0.0-canary.12",
+    "intlayer": "9.0.0-canary.12",
+    "svelte-intlayer": "9.0.0-canary.12",
     "svelte-spa-router": "^5.0.0"
   }
 }
